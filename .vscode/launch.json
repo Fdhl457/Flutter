@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "listing (Flutter Chrome)",
+            "program": "lib/main.dart",
+            "deviceId": "chrome",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "listing (Flutter)",
+            "program": "lib/main.dart",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "listing (Flutter Edge)",
+            "program": "lib/main.dart",
+            "deviceId": "edge",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "listing (Dart)",
+            "program": "bin/main.dart",
+            "deviceId": "brave",
+            "request": "launch",
+            "type": "dart"
+        },
+    ]
+}
