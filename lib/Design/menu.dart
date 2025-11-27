@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:listing/menu.dart';
+import 'package:listing/Design/main.dart';
 
-//Root Main Function
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -12,14 +11,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: Home(),
     );
   }
-}
+} 
 
-
-//Home Page with Drawer Menu (Main Scaffold)
-class MyHomePage extends StatelessWidget {
+class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,7 +60,7 @@ class MyHomePage extends StatelessWidget {
                   Navigator.pop(context);
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Home()),
+                    MaterialPageRoute(builder: (context) => MyHomePage()),
                   );
               },
             ),
@@ -100,30 +97,8 @@ class MyHomePage extends StatelessWidget {
       ),
 
       body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          spacing: Checkbox.width,
-          children: <Widget>[
-            ElevatedButton(
-                onPressed: () {} ,
-                child: 
-                  Text('Go to Details Page'),
-                ),
-            ElevatedButton(
-                onPressed: () {} ,
-                child: 
-                  Text('Go to Details Page'),
-                ),
-            ElevatedButton(
-                onPressed: () {} ,
-                child: 
-                  Text('Go to Details Page'),
-                ),
-          ]     
-        ),
+        child: Text('Home Page'),
       ),
     );
-    
   }
 }
-
