@@ -1,22 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:listing/Script/menu.dart';
-//import 'package:flutter/services.dart';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  const MyApp({super.key});
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Local Model',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home:LoginPage(),
-    );
-  }
-}
 
 class LoginPage extends StatelessWidget {
   @override

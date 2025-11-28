@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:listing/Script/about.dart';
 import 'package:listing/Script/login.dart';
 import 'package:listing/Script/menu.dart';
 import 'package:flutter/services.dart';
@@ -101,7 +102,11 @@ class MyHomePage extends StatelessWidget {
               leading: Icon(Icons.info),
               title: Text('about'),
               onTap: () {
-                
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AboutPage()),
+                );
               },
             ),
           ],

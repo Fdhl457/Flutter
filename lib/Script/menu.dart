@@ -1,21 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:listing/Script/about.dart';
 import 'package:listing/Script/main.dart';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  const MyApp({super.key});
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Local Model',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Home(),
-    );
-  }
-} 
 
 class Home extends StatelessWidget {
   @override
@@ -90,7 +75,11 @@ class Home extends StatelessWidget {
               leading: Icon(Icons.info),
               title: Text('about'),
               onTap: () {
-                
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AboutPage()),
+                );
               },
             ),
           ],
