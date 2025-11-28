@@ -1,23 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:listing/Design/main.dart';
+import 'package:listing/Script/login.dart';
+import 'package:listing/Script/menu.dart';
+import 'package:flutter/services.dart';
 
+//Root Main Function
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
+  const MyApp({super.key});
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Local Model',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Home(),
+      home: MyHomePage(),
     );
   }
-} 
+}
 
-class Home extends StatelessWidget {
+
+//Home Page with Drawer Menu (Main Scaffold)
+class MyHomePage extends StatelessWidget {
   @override
+  const MyHomePage({super.key});
   Widget build(BuildContext context) {
     return Scaffold(
 
@@ -60,7 +67,7 @@ class Home extends StatelessWidget {
                   Navigator.pop(context);
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => MyHomePage()),
+                    MaterialPageRoute(builder: (context) => Home()),
                   );
               },
             ),
@@ -75,14 +82,19 @@ class Home extends StatelessWidget {
               leading: Icon(Icons.login),
               title: Text('login/sign in'),
               onTap: () {
-                
+                Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+                  );
               },
             ),
             ListTile(
               leading: Icon(Icons.exit_to_app),
               title: Text('exit'),
               onTap: () {
-                
+                Navigator.pop(context);
+                SystemChannels.platform.invokeMethod('SystemNavigator.pop');
               },
             ),
             ListTile(
@@ -97,8 +109,31 @@ class Home extends StatelessWidget {
       ),
 
       body: Center(
-        child: Text('Home Page'),
+        child: 
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          spacing: Checkbox.width,
+          children: <Widget>[
+            ElevatedButton(
+                onPressed: () {} ,
+                child: 
+                  Text('Go to Details Page'),
+                ),
+            ElevatedButton(
+                onPressed: () {} ,
+                child: 
+                  Text('Go to Details Page'),
+                ),
+            ElevatedButton(
+                onPressed: () {} ,
+                child: 
+                  Text('Go to Details Page'),
+                ),
+          ]     
+        ),
       ),
     );
+    
   }
 }
+

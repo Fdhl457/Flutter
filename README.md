@@ -1,2 +1,2 @@
 # Flutter
-Flutter App
+school project. tying to learn flutter (again)

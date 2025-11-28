@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:listing/Design/menu.dart';
+import 'package:listing/Script/menu.dart';
 //import 'package:flutter/services.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
+  const MyApp({super.key});
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Local Model',
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
 
 class LoginPage extends StatelessWidget {
   @override
+  const LoginPage({super.key});
   Widget build(BuildContext context) {
     return Scaffold(
 
@@ -34,18 +36,20 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Title(color: Colors.blueGrey, child: Text('Login Here')),
+
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
               child: TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
+                  contentPadding: EdgeInsets.symmetric(vertical: 4.0, horizontal: 1.0),
                   labelText: 'Enter your username',
                ),
               ),
             ),
             
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
               child: TextFormField(
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
@@ -55,7 +59,7 @@ class LoginPage extends StatelessWidget {
             ),
             
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
               child: TextFormField(
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
