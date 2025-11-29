@@ -3,6 +3,7 @@ import 'package:listing/Script/about.dart';
 import 'package:listing/Script/login.dart';
 import 'package:listing/Script/menu.dart';
 import 'package:flutter/services.dart';
+import 'package:listing/Script/start.dart';
 
 //Root Main Function
 void main() => runApp(MyApp());
@@ -120,19 +121,14 @@ class MyHomePage extends StatelessWidget {
           spacing: Checkbox.width,
           children: <Widget>[
             ElevatedButton(
-                onPressed: () {} ,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Start()),
+                  );
+                } ,
                 child: 
-                  Text('Go to Details Page'),
-                ),
-            ElevatedButton(
-                onPressed: () {} ,
-                child: 
-                  Text('Go to Details Page'),
-                ),
-            ElevatedButton(
-                onPressed: () {} ,
-                child: 
-                  Text('Go to Details Page'),
+                  Text('Press to Start'),
                 ),
           ]     
         ),
