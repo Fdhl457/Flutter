@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:listing/Script/about.dart';
-import 'package:listing/Script/main.dart';
+import 'package:listing/Script/login.dart';
+import 'package:flutter/services.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -46,7 +47,7 @@ class Home extends StatelessWidget {
                   Navigator.pop(context);
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => MyHomePage()),
+                    MaterialPageRoute(builder: (context) => Home()),
                   );
               },
             ),
@@ -61,14 +62,19 @@ class Home extends StatelessWidget {
               leading: Icon(Icons.login),
               title: Text('login/sign in'),
               onTap: () {
-                
+                Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+                  );
               },
             ),
             ListTile(
               leading: Icon(Icons.exit_to_app),
               title: Text('exit'),
               onTap: () {
-                
+                Navigator.pop(context);
+                SystemChannels.platform.invokeMethod('SystemNavigator.pop');
               },
             ),
             ListTile(
