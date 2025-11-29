@@ -35,7 +35,9 @@ class MyHomePage extends StatelessWidget {
         hoverColor: Colors.grey,
         backgroundColor: Colors.grey,
         onPressed: () {
-          
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('This feature is not implemented yet.'), action: SnackBarAction(label: 'close', onPressed: (){}),),
+          );
         },
         child: 
           Icon(Icons.add_comment, color: Colors.white),
