@@ -37,7 +37,9 @@ class MyHomePage extends StatelessWidget {
         onPressed: () {
           
         },
-        child: Icon(Icons.add),
+        child: 
+          Icon(Icons.add_comment, color: Colors.white),
+          
       ),
 
       appBar: AppBar(
@@ -121,6 +123,12 @@ class MyHomePage extends StatelessWidget {
           spacing: Checkbox.width,
           children: <Widget>[
             ElevatedButton(
+                /*onHover: (isHovering) {
+                  ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blueGrey,
+                    textStyle: TextStyle(color: Colors.white),
+                  );
+                },*/
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -128,7 +136,7 @@ class MyHomePage extends StatelessWidget {
                   );
                 } ,
                 child: 
-                  Text('Press to Start'),
+                  Text('Press to Start', style: TextStyle(fontSize: 20, color: Color.fromARGB(255, 97, 96, 96)),)
                 ),
           ]     
         ),
